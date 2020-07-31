@@ -5,24 +5,24 @@ import { BrowserRouter as Router, Route, Link, withRouter } from "react-router-d
 const StyledSideNav = styled.div`
   position: fixed;     /* Fixed Sidebar (stay in place on scroll and position relative to viewport) */
   height: 100%;
-  width: 75px;     /* Set the width of the sidebar */
+  width: 4%;     /* Set the width of the sidebar */
   z-index: 1;      /* Stay on top of everything */
   top: 3.4em;      /* Stay at the top */
   background-color: #222; /* Black */
   overflow-x: hidden;     /* Disable horizontal scroll */
-  padding-top: 10px;
+  padding: 10px;
 `;
 const StyledNavItem = styled.div`
-  height: 70px;
-  width: 75px; /* width must be same size as NavBar to center */
+  height: 10%;
+  width: 4%; /* width must be same size as NavBar to center */
   text-align: center; /* Aligns <a> inside of NavIcon div */
   margin-bottom: 0;   /* Puts space between NavItems */
   a {
-    font-size: 2.7em;
+    font-size: 1.8em;
     color: ${(props) => props.active ? "white" : "#9FFFCB"};
     :hover {
       opacity: 0.7;
-      text-decoration: none; /* Gets rid of underlining of icons */
+      text-decoration: none;
     }  
   }
 `;
@@ -61,15 +61,15 @@ class SideNav extends React.Component {
               key: 1 
             },
             {
-              path: '/about',
-              name: 'About',
-              css: 'fa fa-fw fa-clock',
+              path: '/cookbook',
+              name: 'CookBook',
+              css: 'fa fa-fw fa-utensils',
               key: 2
             },
             {
               path: '/NoMatch',
               name: 'NoMatch',
-              css: 'fas fa-hashtag',
+              css: 'fas fa-search',
               key: 3
             },
           ]

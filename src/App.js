@@ -5,7 +5,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { NavigationBar } from './components/NavigationBar';
 import { Home } from './components/Home';
-import { About } from './components/About';
+import { CookBook } from './components/CookBook';
 import { NoMatch } from './components/NoMatch';
 import Sidebar from './components/Sidebar';
 function App() {
@@ -16,7 +16,7 @@ function App() {
     <Sidebar />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
+        <Route path="/cookbook" component={CookBook} />
         <Route component={NoMatch} />
       </Switch>
 
