@@ -18,17 +18,14 @@ const StyledRecipeMaker = styled.div`
         right: 25%;
       }
 `;
-
 export default class RecipeMaker extends React.Component {
     render() {
       return (
-
         <StyledRecipeMaker>
              <Form className="form-center">
                 <FormControl type="text" placeholder="Pick Ingredients" className="" />
              </Form>
         </StyledRecipeMaker>
-
       );
     }
   }

@@ -1,28 +1,4 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import RecipeMaker from './cookbook/RecipeMaker';
-import RecipeCard from './cookbook/RecipeCard';
-import axios from 'axios';
-const Wrapper = styled.div`
-  margin-top: 1em;
-  margin-left: 6em;
-  margin-right: 6em;
-`; 
-export default class CookBook extends Component {
-  state = {
-    recipes: jsonData
-  }
-
-  render(){
-    return (  
-<Wrapper>
-    <RecipeCard recipes={this.state.recipes}></RecipeCard>
-    </Wrapper>
-    )
-  }
-}
-
-const jsonData = [
+export default jsonData = function(){return [
   {
     "id": 1,
     "recipeName": "Tea",
@@ -30,7 +6,7 @@ const jsonData = [
     "liquidUnit": "milliLitre",
     "solidUnit": "gram",
     "servings": "1pax",
-    "description": "A hot drink made by infusing the dried crushed leaves of the tea plant in boiling water.",
+    "description": "",
     "prepTime": "10 mins",
     "totalTime": "10 mins",
     "categories": [
@@ -111,4 +87,4 @@ const jsonData = [
     }
   }
 ]
-
+};
