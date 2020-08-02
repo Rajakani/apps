@@ -1,16 +1,25 @@
-import React from 'react';
-import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
-import styled from 'styled-components';
+import React from "react";
+import { Nav, Navbar, Form, FormControl } from "react-bootstrap";
+import styled from "styled-components";
 const Styles = styled.div`
-  .navbar { background-color: #222; }
-  a, .navbar-nav, .navbar-light .nav-link {
+  .navbar {
+    background-color: rgb(48, 196, 201);
+    border-bottom: rgb(48, 196, 220);
+  }
+  a,
+  .navbar-nav,
+  .navbar-light .nav-link {
     color: white;
-    &:hover { color: #9FFFCB; }
+    &:hover {
+      color: #9fffcb;
+    }
   }
   .navbar-brand {
     font-size: 1.4em;
     color: white;
-    &:hover { color: #9FFFCB; }
+    &:hover {
+      color: #9fffcb;
+    }
   }
   .form-center {
     position: absolute !important;
@@ -21,17 +30,21 @@ const Styles = styled.div`
 export const NavigationBar = () => (
   <Styles>
     <Navbar expand="lg">
-      <Navbar.Brand href="/">App Book</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+      <Navbar.Brand href="/">THINK + CAFE</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
       {/* <Form className="form-center">
         <FormControl type="text" placeholder="Search" className="" />
       </Form> */}
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item> 
-          <Nav.Item><Nav.Link href="/about">Cook Book</Nav.Link></Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="/">Home</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="/about">Cook Book</Nav.Link>
+          </Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
   </Styles>
-)
+);
