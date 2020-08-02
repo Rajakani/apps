@@ -6,6 +6,7 @@ const StyledH2 = styled.h2`
   color: rgb(229, 221, 203);
   padding: 0.2em;
   position: relative;
+ 
 `;
 
 export default class Title extends Component {

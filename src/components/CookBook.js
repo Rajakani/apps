@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import RecipeMaker from "./cookbook/RecipeMaker";
-import RecipeCard from "./cookbook/RecipeCard";
-import axios from "axios";
+import RecipeCards from "./cookbook/RecipeCards";
 const Wrapper = styled.section`
   margin-top: 1em;
   margin-left: 6em;
@@ -16,7 +15,7 @@ export default class CookBook extends Component {
   render() {
     return (
       <Wrapper>
-        <RecipeCard recipes={this.state.recipes}></RecipeCard>
+        <RecipeCards recipes={this.state.recipes}></RecipeCards>
       </Wrapper>
     );
   }
@@ -109,6 +108,84 @@ const jsonData = [
     ],
     popularity: {
       totalPersonsTried: 10,
+    },
+  },
+  {
+    id: 4,
+    recipeName: "Coffee",
+    image: "4-coffee.jpg",
+    liquidUnit: "milliLitre",
+    solidUnit: "gram",
+    servings: "1pax",
+    description:
+      "Let’s get a coffee!",
+    prepTime: "5 mins",
+    totalTime: "5 mins",
+    categories: [
+      {
+        id: 1,
+        name: "Hot Beverage",
+      },
+    ],
+    ingredients: [     
+      {
+        id: 2,
+        IngredientName: "Milk",
+        Quantity: 100,
+      },
+      {
+        id: 3,
+        IngredientName: "Sugar",
+        Quantity: 10,
+      },
+      {
+        id: 4,
+        IngredientName: "Ground Coffee Powder",
+        Quantity: 5,
+      },
+    ],
+    steps: [
+      
+      {
+        Step2: "Heat water for two minutes and add coffee powder",
+      },
+      {
+        Step3: "Reduce the flame and stir. Let it boil for some more time",
+      },
+      {
+        Step4: "Add Milk to get desired thickness",
+      },
+      {
+        Step5: "Add Sugar to taste and serve hot in a cup",
+      },
+    ],
+    Benefits: [],
+    variants: [
+      {
+        id: 5,
+        recipeName: "Filter Coffee",
+      },
+      {
+        id: 6,
+        recipeName: "Mocha",
+      },
+    ],
+    recipesWithSameIngredients: [
+      {
+        id: 7,
+        recipeName: "Espresso",
+      },
+     
+    ],
+    MaterialsRequired: [
+      {
+        id: 1500,
+        Name: "Coffee Powder",
+        amazonUrl: "",
+      },
+    ],
+    popularity: {
+      totalPersonsTried: 5,
     },
   },
 ];

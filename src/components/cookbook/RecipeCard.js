@@ -13,27 +13,25 @@ const Card = styled.div`
   border-bottom: 1px solid rgb(204, 204, 204);
   margin-top: 5px;
   background-color: rgb(229, 221, 203);
+  &:hover {
+    background-color: rgb(210, 210, 200);    
+  }
 `;
 const Description = styled.p`
   color: rgb(70, 67, 58);
   padding-top: 10px;
   text-align: center;
 `;
-export default class RecipeCard extends Component {
+export default class RecipeCards extends Component {
   render() {
+    var imagePath =
+    window.location.origin + "/apps/assets/images/" + this.props.recipe.image;
     return (
       <Card>
-        {this.props.recipes.map((item, index) => {
-          var imagePath =
-            window.location.origin + "/apps/assets/images/" + item.image;
-          return (
-            <a key={index}>
-              <Title title={item.recipeName} />
-              <Image source={imagePath} text={item.recipeName} />
-              <Description>{item.description}</Description>
-            </a>
-          );
-        })}
+        {},
+        <Title title={this.props.recipe.recipeName} />
+        <Image source={imagePath} text={this.props.recipe.recipeName} />
+        <Description>{this.props.recipe.description}</Description>
       </Card>
     );
   }
